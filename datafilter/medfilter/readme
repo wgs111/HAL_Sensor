@@ -1,0 +1,8 @@
+使用中值滤波，考虑了参数，比较好的是用2或者3
+For odd n, y(k) is the median of x(k-(n-1)/2:k+(n-1)/2).
+
+For even n, y(k) is the median of x(k-n/2), x(k-(n/2)+1), ..., x(k+(n/2)-1). In this case, medfilt1 sorts the numbers, then takes the average of the n/2 and (n/2)+1 elements.
+
+公式为：
+对于基数的参数n，y(k)是从x取k-(n-1)/2到k+(n-1)/2时的均值
+对于偶数的参数n，y(k)是从x取k-n/2,k-n/2+1到k+(n/2)-1时的均值
